@@ -1,0 +1,34 @@
+.root {
+  background-color: sandybrown;
+}
+
+section {
+  align-content: center;
+  size: 300%;
+}
+
+.contact-admin-massage {
+  align-content: center;
+  color: red;
+}
+
+.role {
+  color: red;
+}
+
+.redText {
+  color: red;
+}
+section .edit-product-styles {
+  align-content: center;
+  height: 60px;
+  justify-content: space-between;
+  padding: 0 1rem;
+  align-items: center;
+  display: inline;
+}
+
+.user-detail {
+  align-content: center;
+  color: red;
+}
