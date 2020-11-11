@@ -11,7 +11,7 @@ export default function Edit_Product_Component({ Data }) {
     history.push("/borrow-productList-component");
     history.goBack()
   }
-  var itemSelect = null;
+  let itemSelect = null;
 
   const labelStyles1 = {
     color: "black",
@@ -93,7 +93,7 @@ export default function Edit_Product_Component({ Data }) {
             onClick={async () => {
               await setisLoading(true);
               await EditProduct(
-                dataSelect.product_id,
+                dataSelect[0].product_id,
                 document.getElementById("new-name").value,
                 document.getElementById("new-price").value,
                 document.getElementById("new-stock").value

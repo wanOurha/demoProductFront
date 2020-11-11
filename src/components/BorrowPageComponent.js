@@ -12,7 +12,7 @@ export default function BorrowPageComponent({
     history.push("/borrow-productList-component");
     history.goBack()
   };
-  var itemSelect = null
+  let itemSelect = null
   const labelStyles1 = {
     color: "black",
     padding: "10px",

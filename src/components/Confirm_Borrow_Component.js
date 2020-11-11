@@ -11,7 +11,6 @@ import Loding_Component from "./Loading_Component";
 export default function Confirm_Borrow_Component({
   role,
   BorrowUnconfirm,
-  isLoginProp,
 }) {
   const history = useHistory();
   const handleUrl = () => {
@@ -99,17 +98,6 @@ export default function Confirm_Borrow_Component({
 
   return (
     <div>
-      {isLoginProp == null && (
-        <div>
-          <h1>Please Login Before</h1>
-        </div>
-      )}
-      {role === "" && alert("Please Log In Before")}
-      {role === "user" && (
-        <h1>
-          <span className="role">{role}</span> role can't confirm borrow
-        </h1>
-      )}
       {role === "admin" && (
         <section>
           <div>

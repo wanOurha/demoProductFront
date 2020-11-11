@@ -9,20 +9,20 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "./styles.css";
 import { useHistory } from "react-router-dom";
-import { confirmAlert } from "react-confirm-alert"; // Import
-import "react-confirm-alert/src/react-confirm-alert.css"; // Import css
+import { confirmAlert } from "react-confirm-alert";
+import "react-confirm-alert/src/react-confirm-alert.css"; 
 import Loding_Component from "./Loading_Component";
 
-var URL = "";
-var user_id = "";
-var token = "";
-var AuthHeader = {
+let URL = "";
+let user_id = "";
+let token = "";
+let AuthHeader = {
   headers: { Authorization: `Bearer ` + token },
 };
-var role = "";
-var isLogin = null;
-var user = "";
-var pass = "";
+let role = "";
+let isLogin = null;
+let user = "";
+let pass = "";
 
 function getRole() {
   return role;
@@ -48,15 +48,15 @@ function GetData(url) {
     axios
       .get(URL, AuthHeader)
       .then(async (result) => {
-        let { data } = result;
-        await setfetchDataArray(data);
+        let { data } = result
+        await setfetchDataArray(data)
       })
       .catch((error) => {
         if (error.response.status === 401) {
-          alert(`Click "Account" to Log in`);
-          isLogin = null;
-          role = "";
-          handleUrltoLogin();
+          alert(`Click "Account" to Log in`)
+          isLogin = null
+          role = ""
+          handleUrltoLogin()
         }
       });
     return () => {};
@@ -400,8 +400,8 @@ async function EditProduct(productId, productNames, prices, stocks) {
       alert("Edit product: " + productId + " Success")
     })
     .catch((error) => {
-      if (error.message == "Request failed with status code 400") {
-        alert(error.message);
+      if (error.response.status == 400) {
+        alert(error.response.status);
       }
     })
     return 

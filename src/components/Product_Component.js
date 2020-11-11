@@ -22,9 +22,6 @@ export default function product_Component({
       {productDataArray == null && (
         <Loding_Component/>
       )}
-      {/* {productDataArray.length == 0 && 
-        <h1>length</h1>
-      } */}
       {productDataArray != null && (
         <section>
           <h1>Product List</h1>
